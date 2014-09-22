@@ -18,6 +18,7 @@ Bmob云端代码本地调试工具
 ## 命令行调试
 
 1. 打开命令提示符工具，进入到Repo对应的test目录下。
+
 2. 执行命令`node test.js`，即可看到调试信息。如下图所示：
 
 ![](images/command.jpg)
@@ -29,7 +30,9 @@ Bmob云端代码本地调试工具
 
 1. 导入Repo工程。
 
+
 ![](images/create-project.jpg)
+
 
 2. 修改NodeJs编译器的路径信息。过程如下：执行菜单Run->Edit Configurations，并修改NodeJs的安装路径，如下图所示
 
@@ -38,5 +41,6 @@ Bmob云端代码本地调试工具
 ![](images/nodepath.jpg)
 
 3. 打开test/test.js文件，右击鼠标，在弹出菜单中选择“Run 'nodejs'”，如果配置无误的话就可以看到调试结果了，如下图所示：
+
 
 ![](images/debug.jpg)
