@@ -25,7 +25,7 @@ Bmob云端代码本地调试工具
 
 ## WebStorm IDE调试（推荐）
 
-你还可以借助一些IDE工具进行云端代码的编辑和调试，下面以WebStorm（下载地址：http://www.jetbrains.com/webstorm/）为例进行阐述。
+你还可以借助一些IDE工具进行云端代码的编辑和调试，下面以WebStorm（下载地址：http://www.jetbrains.com/webstorm/ ）为例进行阐述。
 
 
 1. 导入Repo工程。
