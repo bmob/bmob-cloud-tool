@@ -4,7 +4,7 @@ function onRequest(request, response, modules) {
         "table": "_User",
         "objectId": request.body.userid
     }, function (err, data) {
-        response.end(data);
+        response.end(data || err);
     });
 }
 

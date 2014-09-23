@@ -8,18 +8,35 @@ var options = {
 
 tool.initialize(options.app_key, options.rest_key);
 
+function local() {
 //调用hello.js云端代码
-var hello = require("../../bmobcloud-local/test/hello.js").hello;
-tool.test(hello);
+    var hello = require("../cloud/hello.js").hello;
+    tool.test(hello);
 
 //调用first.js云端代码（带上传参数）
-var first = require("../cloud/first.js").first;
-tool.test(first, {"name":"Bmob后端云"});
+    var first = require("../cloud/first.js").first;
+    tool.test(first, {"name": "Bmob后端云"});
 
 //调用second.js云端代码
-var second = require("../cloud/second.js").second;
-tool.test(second);
+    var second = require("../cloud/second.js").second;
+    tool.test(second);
 
 //调用third.js云端代码（带上传参数）
-var third = require("../cloud/third.js").third;
-tool.test(third, {"userid":"y6qBDvXj"});
+    var third = require("../cloud/third.js").third;
+    tool.test(third, {"userid": "y6qBDvXj"});
+}
+
+function server() {
+    var path = require("path");
+//调用first.js云端代码（带上传参数）
+    tool.testInServer(path.resolve(__dirname, "../cloud/first.js"), {"name": "Bmob后端云"});
+
+//调用second.js云端代码
+    tool.testInServer(path.resolve(__dirname, "../cloud/second.js"));
+
+//调用third.js云端代码（带上传参数）
+    tool.testInServer(path.resolve(__dirname, "../cloud/third.js"), {"userid": "y6qBDvXj"});
+}
+
+local();
+//server();

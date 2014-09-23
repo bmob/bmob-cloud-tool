@@ -5,7 +5,7 @@ function onRequest(request, response, modules) {
     db.find({
         "table":"_User"
     },function(err,data){
-        response.end(data);
+        response.end(data || err);
     });
 }
 

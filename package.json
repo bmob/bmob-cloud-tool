@@ -1,12 +1,12 @@
 {
     "name": "bmob-cloud-tool",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-        "bmobcloud-local": "0.2.0"
+        "bmobcloud-local": "0.3.1"
     },
     "author": "winse@bmob",
     "license": "Apache"
