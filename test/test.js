@@ -38,5 +38,12 @@ function server() {
     tool.testInServer(path.resolve(__dirname, "../cloud/third.js"), {"userid": "y6qBDvXj"});
 }
 
-local();
+function relation() {
+//调用hello.js云端代码
+    var leagueScoreTable = require("../cloud/leagueScoreTable.js").leagueScoreTable;
+    tool.test(leagueScoreTable);
+}
+
+//local();
 //server();
+relation();
