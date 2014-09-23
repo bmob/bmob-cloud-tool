@@ -2,8 +2,8 @@ var tool = require("bmobcloud-local");
 
 //请根据自己的情况修改application_id和rest_key信息
 var options = {
-    "app_key": "69015a79796397f7701454336b84e0c4",
-    "rest_key": "9b82ae3876ed4ee081d3c34224ff3a7a"
+    "app_key": "b94e8b49cf3524549bcd365c56c527c3",
+    "rest_key": "9e69f4a8220f2e5d1e2e1cc080a3b999"
 };
 
 tool.initialize(options.app_key, options.rest_key);
@@ -45,5 +45,5 @@ function relation() {
 }
 
 //local();
-//server();
-relation();
+server();
+//relation();
