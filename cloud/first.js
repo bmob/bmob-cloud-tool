@@ -8,6 +8,8 @@ function onRequest(request, response, modules) {
         //var resultObject = JSON.parse(data);
         response.end(data || err);
     });
+
+    response.end("earlier end!!");
 }
 
 exports.first = onRequest;

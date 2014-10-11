@@ -1,10 +1,7 @@
 var tool = require("bmobcloud-local");
 
 //请根据自己的情况修改application_id和rest_key信息
-var options = {
-    "app_key": "b94e8b49cf3524549bcd365c56c527c3",
-    "rest_key": "9e69f4a8220f2e5d1e2e1cc080a3b999"
-};
+var options = require("../AppConfig.json");
 
 tool.initialize(options.app_key, options.rest_key);
 
@@ -39,11 +36,16 @@ function server() {
 }
 
 function relation() {
-//调用hello.js云端代码
     var leagueScoreTable = require("../cloud/leagueScoreTable.js").leagueScoreTable;
     tool.test(leagueScoreTable);
 }
 
-//local();
-server();
+function bug2() {
+    var playerScore = require("../cloud/playerScore.js").playerScore;
+    tool.test(playerScore);
+}
+
+local();
+//server();
 //relation();
+//bug2();

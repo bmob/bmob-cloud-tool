@@ -1,0 +1,1 @@
+exports.Bmob =  require("./sdk/bmob.js").Bmob;
