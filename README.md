@@ -13,7 +13,7 @@ Bmob云端代码本地调试工具
 
 1. 进入Repo的cloud文件夹，编写相应的云端代码（可参考我们提供的demo）。
 
-2. 根据自己的APP信息，修改test文件夹下的`test.js`的`app_key`和`rest_key`信息。
+2. 根据自己的APP信息，修改`AppConfig.json`的`app_key`和`rest_key`信息。
 
 ## 命令行调试
 
