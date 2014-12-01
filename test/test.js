@@ -45,7 +45,15 @@ function bug2() {
     tool.test(playerScore);
 }
 
-local();
+//local();
 //server();
 //relation();
 //bug2();
+
+function testUserSignUp(){
+    var userSignUp = require("../cloud/userSignUp.js").userSignUp;
+    tool.test(userSignUp);
+}
+
+testUserSignUp();
+

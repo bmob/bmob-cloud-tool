@@ -6,8 +6,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "mocha": "1.21.4",
-    "should": "4.0.4",
     "bmobcloud-local": "~0.5.0"
   },
   "author": "winse@bmob",
