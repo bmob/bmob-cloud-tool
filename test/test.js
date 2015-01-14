@@ -55,5 +55,25 @@ function testUserSignUp(){
     tool.test(userSignUp);
 }
 
-testUserSignUp();
+//testUserSignUp();
 
+function testUserLogin(){
+    var testLogin = require("../cloud/testLogin.js").testLogin;
+    tool.test(testLogin);
+}
+
+//testUserLogin();
+
+function testUpdateUserByObjectId(){
+    var testUpdateUserByObjectId = require("../cloud/testUpdateUserByObjectId.js").testUpdateUserByObjectId;
+    tool.test(testUpdateUserByObjectId);
+}
+
+//testUpdateUserByObjectId();
+
+function testRemoveUserByObjectId(){
+    var testRemoveUserByObjectId = require("../cloud/testRemoveUserByObjectId.js").testRemoveUserByObjectId;
+    tool.test(testRemoveUserByObjectId);
+}
+
+testRemoveUserByObjectId();
