@@ -23,6 +23,8 @@ function local() {
     tool.test(third, {"userid": "y6qBDvXj"});
 }
 
+//local();
+
 function server() {
     var path = require("path");
 //调用first.js云端代码（带上传参数）
@@ -35,6 +37,8 @@ function server() {
     tool.testInServer(path.resolve(__dirname, "../cloud/third.js"), {"userid": "y6qBDvXj"});
 }
 
+//server();
+
 function relation() {
     var leagueScoreTable = require("../cloud/leagueScoreTable.js").leagueScoreTable;
     tool.test(leagueScoreTable);
@@ -45,35 +49,63 @@ function bug2() {
     tool.test(playerScore);
 }
 
-//local();
-//server();
 //relation();
 //bug2();
 
-function testUserSignUp(){
+function testUserSignUp() {
     var userSignUp = require("../cloud/userSignUp.js").userSignUp;
     tool.test(userSignUp);
 }
 
 //testUserSignUp();
 
-function testUserLogin(){
+function testUserLogin() {
     var testLogin = require("../cloud/testLogin.js").testLogin;
     tool.test(testLogin);
 }
 
 //testUserLogin();
 
-function testUpdateUserByObjectId(){
+function testUpdateUserByObjectId() {
     var testUpdateUserByObjectId = require("../cloud/testUpdateUserByObjectId.js").testUpdateUserByObjectId;
     tool.test(testUpdateUserByObjectId);
 }
 
 //testUpdateUserByObjectId();
 
-function testRemoveUserByObjectId(){
+function testRemoveUserByObjectId() {
     var testRemoveUserByObjectId = require("../cloud/testRemoveUserByObjectId.js").testRemoveUserByObjectId;
     tool.test(testRemoveUserByObjectId);
 }
 
-testRemoveUserByObjectId();
+//testRemoveUserByObjectId();
+
+function testWinxinVerify() {
+    var weixin = require("../cloud/weixin.js").weixin;
+    // GET /messages?signature=f3b3ed8c9d4884df62e12b3dfba1f9240713bccf&echostr=1059940013166034888&timestamp=1446001536&nonce=712903944 200 2.133 ms - 19
+    tool.test(weixin,
+        {
+            query: "signature=f3b3ed8c9d4884df62e12b3dfba1f9240713bccf&echostr=1059940013166034888&timestamp=1446001536&nonce=712903944",
+            method: "GET"
+        }
+    );
+}
+
+//testWinxinVerify();
+
+var cs = require("coffee-script");
+var wxd = require("./weixin_sample")
+function testWinxinText() {
+    var weixin = require("../cloud/weixin.js").weixin;
+    tool.testWithHeaders(weixin,
+        {
+            type: "XML",
+            data: wxd.text
+        },
+        {
+            'content-type': 'text/xml'
+        }
+    );
+}
+
+//testWinxinText();
