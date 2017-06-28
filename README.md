@@ -51,8 +51,6 @@ Bmob云端代码本地调试工具
 
 ## Bmob官方信息
 
-官方网址：[http://www.bmob.cn](http://www.bmob.cn)
-
-问答社区：[http://wenda.bmob.cn](http://wenda.bmob.cn)
-
 技术邮箱：support@bmob.cn
+
+# 本项目已不再维护，只做学习研究使用，如需调试云逻辑、请使用WEB端在线调试。
